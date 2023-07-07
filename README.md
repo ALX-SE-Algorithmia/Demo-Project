@@ -1,6 +1,8 @@
 # Demo Project (Build Collaboration Skills 👩‍💻👨‍💻🎧)
 Our first demo project we will be working on together, to test collaboration skills.
 
+And everyone can contribute toward to the development of this organisation.
+
 We will build a calculator in C and any other language of each individual's choice.
 Check out the <a href="https://github.com/ALX-SE-Algorithmia/Demo-Project/blob/main/Demo%20Project.pdf">resource</a>.
 
