@@ -6,6 +6,8 @@ Check out the <a href="https://github.com/ALX-SE-Algorithmia/Demo-Project/blob/m
 
 
 ## Contributing:
+Check out this document: <a href="https://github.com/ALX-SE-Algorithmia/Demo-Project/blob/main/CONTRIBUTION.md">Contribution</a>
+<!--
 1. Fork the repository.
 2. Clone the repo on your local machine using the command:
 
@@ -29,6 +31,7 @@ Check out the <a href="https://github.com/ALX-SE-Algorithmia/Demo-Project/blob/m
 
 8. Create a pull request.
 9. Code will be reviewed together, as a team.
+-->
 
 
 ###### Happy Coding 👨‍💻👩‍💻🎧🤍
