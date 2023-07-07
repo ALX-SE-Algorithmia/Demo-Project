@@ -48,3 +48,9 @@ Collaborating on an open source project using the "fork and branch" workflow inv
    This will update your local branch with the latest changes from the original repository.
 
 By following these steps, you can effectively collaborate on an open source project by forking the repository, creating a new branch, making changes, and submitting pull requests. It allows you to work on the project independently while keeping your changes separate from the original repository until they are reviewed and merged.
+
+
+<!-- Dohou Daniel: Added this -->
+Check these out for more clarification:
+a. <a href="https://github.com/dohoudaniel/Dohou-Daniel-Demo-Project.git">A Forked Repo</a>
+b. <a href="https://github.com/dohoudaniel/Dohou-Daniel-Demo-Project/blob/dohoudaniel/Steps-Used.md">Steps Used In Creating That Forked Repo</a>
