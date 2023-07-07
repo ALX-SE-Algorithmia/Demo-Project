@@ -1,7 +1,9 @@
 ## Collaborating
 Collaborating on an open source project using the "fork and branch" workflow involves the following steps:
 
-1. **Fork the Repository:** Start by navigating to the repository on the platform where it is hosted (e.g., GitHub) and click on the "Fork" button. This creates a copy of the repository under your GitHub account.
+1. **Fork the Repository:** Start by navigating to the repository on the platform where it is hosted (e.g., GitHub) and click on the "Fork" button. This creates a copy of the repository under your GitHub account. Use this link below:
+
+      - Fork this repo: <a href="https://github.com/ALX-SE-Algorithmia/Demo-Project/fork">Fork this repository</a>
 
 2. **Clone the Forked Repository:** Once you have forked the repository, clone it to your local machine using the `git clone` command. This creates a local copy of the repository that you can work with.
    ```
