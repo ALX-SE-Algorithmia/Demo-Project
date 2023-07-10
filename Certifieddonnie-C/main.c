@@ -16,7 +16,6 @@ void intro(void)
 	printf("Files Compiled and Ready to Operate!\n");
 	sleep(3);
 	printf("\nWhat is your Name?\n==> ");
-	// scanf("%s", &user_name);
 	fgets(user_name, 100, stdin);
 	printf("Nice to have you here %s\n", user_name);
 }
@@ -80,26 +79,27 @@ int main(void)
 	/* ruler = tolower(ruler); */
 	while (1)
 	{
+		/* printf("1"); */
 		if (strcmp(ruler, "q") == 0)
 		{
 			printf("Exiting the calculator program.\n");
 			break;
 		}
-		else if (strcmp(ruler, "l") == 0)
+		if (strcmp(ruler, "l") == 0)
 		{
 			printf("Enter the number: ");
 			scanf("%lf", &log_number);
 			res = logarithm(log_number);
-			printf("%.2lf\n", res);
+			if (res != 1)
+			{
+				printf("%.2lf\n", res);
+			}
 		}
-		else if (strcmp(ruler, "e") == 0)
+		if (strcmp(ruler, "e") == 0)
 		{
 			expression();
 		}
-		else
-		{
-			WrongInput();
-		}
+
 		printf("\nEnter Rules: e | l | q ");
 		fgets(ruler, 2, stdin);
 		/* ruler = tolower(ruler); */
