@@ -31,6 +31,7 @@ To use this calculator program, follow the steps below:
 4. Open the calculator program file (`calc.c` or the respective file for your chosen programming language) in your preferred code editor.
 
 5. Compile the program using a compatible compiler.
+eg. gcc -Wall -Werror -Wextra -pedantic *.c -lm
 
 6. Run the compiled executable.
 

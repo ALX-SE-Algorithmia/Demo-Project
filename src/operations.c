@@ -49,3 +49,15 @@ long double power(long double a, long double b)
 {
         return (b == 0 ? 1 : a * power(a, --b));
 }
+
+
+/**
+ * modulo - the modulo operation
+ * @a: number
+ * @b: number
+ * Return: the remainder of a divided by b
+*/
+long double modulo(long double a, long double b)
+{
+    return fmod(a, b);
+}
