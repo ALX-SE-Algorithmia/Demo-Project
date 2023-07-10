@@ -1,19 +1,22 @@
 # **BASIC CALCULATOR**
-	This is a C basic calculator template that can still be modified to your
-	preference. The program is quite interactive with adequate documentation
-	on all functions and how they work.
+
+This is a C basic calculator template that can still be modified to your
+preference. The program is quite interactive with adequate documentation
+on all functions and how they work.
 
 ## **PURPOSE**
-	The Purpose of this project is to provide an opportunity whereby everyone
-	get to enhance their knowledge in C programming. It also helps your skill
-	on how to collaborate on future projects.
+
+The Purpose of this project is to provide an opportunity whereby everyone
+get to enhance their knowledge in C programming. It also helps your skill
+on how to collaborate on future projects.
 
 ## **FEATURES**
-	- User-Friendly Prompts: The program displays a clear and concise prompt to guide users in entering their arithmetic expressions
-	- Automated Makefiles: There are ready made Makefiles that helps for easy Compilation of the C files and also for easy committing and push of changes.
-	- Error Handlers: The Program has ready made Error handling functions that can help when creating more functions. The Error handlers can be modified to your taste. Feel free to edit it and make them yours.
-	- Betty Documentation Styles: The Program follows Betty Documentation styling. All functions are well documented!
-	- Ignored Files: To avoid the folder to be clumsy. Object files are being ignored. Likewise other confidential files that are meant to be private to only you.
+
+- User-Friendly Prompts: The program displays a clear and concise prompt to guide users in entering their arithmetic expressions
+- Automated Makefiles: There are ready made Makefiles that helps for easy Compilation of the C files and also for easy committing and push of changes.
+- Error Handlers: The Program has ready made Error handling functions that can help when creating more functions. The Error handlers can be modified to your taste. Feel free to edit it and make them yours.
+- Betty Documentation Styles: The Program follows Betty Documentation styling. All functions are well documented!
+- Ignored Files: To avoid the folder to be clumsy. Object files are being ignored. Likewise other confidential files that are meant to be private to only you.
 
 ## **GETTING STARTED**
 
