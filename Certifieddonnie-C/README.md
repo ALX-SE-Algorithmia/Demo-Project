@@ -24,11 +24,13 @@ Irrespective of your System O.S, Follow these steps:
 
 1. Clone the repository -> [Demo-Project-Repository](https://github.com/ALX-SE-Algorithmia/Demo-Project)
 2. Change Directory to `Demo-Project/Certifieddonnie-C`
-3. Run the MakeFile => `make all`
+3. Run the MakeFile => `make -f compiler all`
 4. Run the Compiled Executable => `./calculator`
 5. Enjoy the prompts and use the program.
-6. After running the program. Run => `make clean`
+6. After running the program. Run => `make -f compiler clean`
 7. Have Fun and Implement the changes you prefer
+
+**Bonus: I have betty implemented in the makefile! Use `make -f compiler betty`** 
 
 ## **LICENSE**
 
