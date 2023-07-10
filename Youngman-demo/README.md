@@ -52,7 +52,7 @@ rm calc
 ## File Structure
 
 The project contains the following files:
-C-project/
+Youngman-demo/
 ├── main.h
 ├── calc.c
 ├── basic_cal.c
