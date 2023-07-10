@@ -90,7 +90,7 @@ int main(void)
 			printf("Enter the number: ");
 			scanf("%lf", &log_number);
 			res = logarithm(log_number);
-			printf("%lf\n", res);
+			printf("%.2lf\n", res);
 		}
 		else if (strcmp(ruler, "e") == 0)
 		{
@@ -100,7 +100,7 @@ int main(void)
 		{
 			WrongInput();
 		}
-		printf("\nEnter Rules: e | l | q\n==>");
+		printf("\nEnter Rules: e | l | q ");
 		fgets(ruler, 2, stdin);
 		/* ruler = tolower(ruler); */
 	}
