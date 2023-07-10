@@ -7,7 +7,7 @@
  */
 int calc(void)
 {
-    int opt, num_1, num_2, tries = 0, res_1;
+    int opt, num_1, num_2, tries = 0, res_1, count;
     double num_3, num_4, res_2;
     char operator, name[100];
 
@@ -135,7 +135,18 @@ int calc(void)
         }
         else if (opt == 3)
         {
-            printf("Exiting the calculator...\n");
+            printf("Exiting the calculator");
+	    usleep(500000);
+	    fflush(stdout);
+	    for (count = 0; count < 3; count++)
+	    {
+		    usleep(500000);
+		    printf(" .");
+		    fflush(stdout);
+		    usleep(400000);
+	    }
+	    fflush(stdout);
+	    usleep(700000);
             system("clear");
             break;
         }
@@ -145,7 +156,15 @@ int calc(void)
             tries++;
             if (tries == 3)
             {
-                printf("Exceeded trial period. Exiting thecalculator...\n");
+              printf("Exceeded trial period. Exiting thecalculator");
+
+		for (count = 0; count < 3; count++)
+		{
+			usleep(500000);
+			printf(" .");
+			fflush(stdout);
+			sleep(500000);
+		}
                 system("clear");
                 break;
             }
@@ -155,7 +174,7 @@ int calc(void)
     return (0);
 }
 
-int main(void)
+int main(void):
 {
     calc();
     return (0);

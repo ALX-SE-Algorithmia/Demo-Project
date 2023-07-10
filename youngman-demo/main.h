@@ -6,6 +6,7 @@
 #include <math.h>
 #include <string.h>
 #include <limits.h>
+#include <unistd.h>
 
 /* Basic Calculator Functions */
 int add(int a, int b);
