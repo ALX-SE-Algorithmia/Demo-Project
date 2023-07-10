@@ -156,7 +156,7 @@ int calc(void)
             tries++;
             if (tries == 3)
             {
-                printf("Exceeded trial period. Exiting thecalculator");
+              printf("Exceeded trial period. Exiting thecalculator");
 
 		for (count = 0; count < 3; count++)
 		{
@@ -174,7 +174,7 @@ int calc(void)
     return (0);
 }
 
-int main(void)
+int main(void):
 {
     calc();
     return (0);
