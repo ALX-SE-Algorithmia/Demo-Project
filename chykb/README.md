@@ -1,9 +1,9 @@
 <img src="https://www.pragimtech.com/wp-content/uploads/2020/03/c-tutorial-for-beginners.png">
 
 # C Programming
-This directory contains a collection of problem solving projects
+This directory contains a collection of problem-solving projects
 
-## Project 1 __Command-line caclculator using function pointers
+## Project 1 __Command-line calculator using function pointers
 This is a simple command-line calculator that uses function pointers. The calculator can perform the basic arithmetic operations of addition, multiplication, division, and subtraction.
 
 ## How to use
@@ -20,5 +20,4 @@ Enter 2 numbers, one at a time:
 3
 The result is : 6
 
-
-#### [AUTHOR __Blessing Malik__](https://github.com/chykB)
+#### [Author: __Blessing Malik__](https://github.com/chykB)
