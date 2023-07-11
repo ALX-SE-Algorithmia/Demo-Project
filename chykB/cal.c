@@ -20,7 +20,7 @@ float sub(float n1, float n2) {return (n1 - n2);}
          printf("Select operation : 0 for sum, 1 for multiply, 2 for division, 3 for subtraction\n");
          scanf("%d", &select);
 
-	 /*prompts them to enter two numbers*/
+	 /*prompts the user to enter two numbers*/
          printf("Enter 2 numbers, one at a time: \n");
          scanf("%f %f", &n1, &n2);
 
