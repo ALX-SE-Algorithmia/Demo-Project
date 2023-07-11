@@ -1,3 +1,5 @@
+<img src="https://www.pragimtech.com/wp-content/uploads/2020/03/c-tutorial-for-beginners.png">
+
 # C Programming
 This directory contains a collection of problem solving projects
 
@@ -19,4 +21,4 @@ Enter 2 numbers, one at a time:
 The result is : 6
 
 
-# [AUTHOR](https://github.com/chykB)
+#### [AUTHOR __Blessing Malik__](https://github.com/chykB)
