@@ -1,5 +1,6 @@
 #include <stdio.h>   /* To include standard input and output functions */
 #include <stdlib.h>  /* To include standard library functions */
+#include "main_functions.h"
 
 /**
  * performCalculation - Performs arithmetic calculation based on user input
