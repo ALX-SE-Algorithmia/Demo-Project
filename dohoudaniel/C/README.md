@@ -10,3 +10,5 @@ This is a calculator that prompt the user to enter two numbers and an arithmetic
 2. Subtraction ('-')
 3. Multiplication ('*')
 4. Division ('/')
+
+*All C files in this directory have been betty checked.*
