@@ -10,7 +10,7 @@
  */
 void storeUsername(char *username, int maxLength)
 {
-	printf("Enter your username (max. of 50 chars): ");
+	printf("Enter your username (max. of 25 chars): ");
 	fgets(username, maxLength, stdin);
 	username[strcspn(username, "\n")] = '\0';  /* Remove the trailing newline character */
 }
