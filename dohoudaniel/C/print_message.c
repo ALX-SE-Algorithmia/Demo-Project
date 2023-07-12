@@ -25,7 +25,7 @@ void printIntroMessage(void)
 	sleep(1.5);
 	printf("Division: /\n");
 	sleep(2);
-	printf("\nRemember to enter valid numbers and an /arithmetic operator as listed...\n\n");
+	printf("\nRemember to enter valid numbers and an arithmetic operator as listed...\n\n");
 	sleep(1.5);
 	printf(".");
 	sleep(1.5);
