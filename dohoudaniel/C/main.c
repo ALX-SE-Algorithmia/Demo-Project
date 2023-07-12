@@ -38,6 +38,16 @@ int main(void)
 		exit(EXIT_FAILURE);    /* Program exits if user's operator is invalid */
 	}
 
+	/* Storing as input, second number from the user */
+	printf("Enter your second number: ");
+	/* Checking if the second number is invalid. */
+	if (scanf("%d", &num2) != 1)
+	{
+		printf("Error: Second number invalid! Please enter a valid number.\n");
+		exit(EXIT_FAILURE);    /* Program exits if user's operator is invalid */
+	}
+
+
 	/* Storing the arithmetic operator of the user */
 	getchar();  /* Clear input buffer */
 	printf("Enter your arithmetic operator: ");
@@ -47,15 +57,6 @@ int main(void)
 	if (!isValidOperator(operator))
 	{
 		printf("Error: Invalid operator! Please enter a valid arithmetic operator.\n");
-		exit(EXIT_FAILURE);    /* Program exits if user's operator is invalid */
-	}
-
-	/* Storing as input, second number from the user */
-	printf("Enter your second number: ");
-	/* Checking if the second number is invalid. */
-	if (scanf("%d", &num2) != 1)
-	{
-		printf("Error: Second number invalid! Please enter a valid number.\n");
 		exit(EXIT_FAILURE);    /* Program exits if user's operator is invalid */
 	}
 
