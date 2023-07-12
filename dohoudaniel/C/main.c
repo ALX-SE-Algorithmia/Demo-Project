@@ -21,6 +21,7 @@ int main(void)
 
 	/* Storing usernames entered in by the user */
 	printf("\n\nWelcome!.\n");
+	sleep(2.5);
 	storeUsername(username, maxLength);
 	printf("\nHello, %s!\n", username);
 	sleep(1.5);
