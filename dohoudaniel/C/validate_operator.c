@@ -1,7 +1,5 @@
 #include "main.h"    /* Include header file */
 #include <stdio.h>    /* To include standard input and output functions */
-#include <ctype.h>   /* To check the type of an integer */
-#include <stdbool.h>    /* To work with Boolean values */
 #include <string.h>    /* To work with characters and strings */
 
 /**
@@ -10,9 +8,15 @@
  *
  * Return: True if entered operator is valid. Else, false
  */
-bool isValidOperator(char operator)
+int isValidOperator(char operator)
 {
 	/* Returns true if user input is among defined operators. */
-	return (operator == '+' || operator == '-' || operator == '*'
-			|| operator == '/');
+	if (operator == '+' || operator == '-' || operator == '*'
+			|| operator == '/')
+	{
+		return (1);
+	}
+	else {
+		return (0);
+	}
 }

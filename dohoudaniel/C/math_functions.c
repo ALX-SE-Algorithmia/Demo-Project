@@ -1,6 +1,8 @@
 #include "main.h"    /* The main header file */
 #include <math.h>    /* The C standard header file for math operations */
 #include <ctype.h>    /* The C standard header file for data types */
+#include <stdio.h>    /* To include standard input and output functions */
+#include <stdlib.h>  /* To include standard library functions */
 
 /**
  * add - Returns the sum of two numbers.

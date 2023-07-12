@@ -16,6 +16,4 @@ void exitMessage(void)
 	sleep(2);
 	printf("Recompile to use again...\n");
 	sleep(1.75);
-	printf("Goodbye, %s!\n", username);
-	sleep(2);
 }
