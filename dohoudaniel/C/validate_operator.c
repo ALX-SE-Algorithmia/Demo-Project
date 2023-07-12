@@ -1,5 +1,6 @@
 #include "main.h"    /* Include header file */
 #include <stdio.h>    /* To include standard input and output functions */
+#include <ctype.h>   /* To check the type of an integer */
 #include <stdbool.h>    /* To work with Boolean values */
 #include <string.h>    /* To work with characters and strings */
 
