@@ -21,3 +21,4 @@ Enter 2 numbers, one at a time:
 The result is : 6
 
 #### [Author: __Blessing Malik__](https://github.com/chykB)
+
