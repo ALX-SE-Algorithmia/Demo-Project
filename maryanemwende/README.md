@@ -1,0 +1,1 @@
+This folder contains a calculator program written in the C programming language. The calculator prompts the user to enter an arithmetic operation to be performed on two numbers. It supports decimal values and the following operators: Multiplication(*), Subtraction(-), Addition(+), Division(/). 
