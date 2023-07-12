@@ -3,6 +3,7 @@
 #include <ctype.h>    /* The C standard header file for data types */
 #include <stdio.h>    /* To include standard input and output functions */
 #include <stdlib.h>  /* To include standard library functions */
+#include "math_functions.h"    /* The mathematical function header file */
 
 /**
  * add - Returns the sum of two numbers.
