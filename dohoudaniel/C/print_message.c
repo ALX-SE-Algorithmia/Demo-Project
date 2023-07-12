@@ -35,6 +35,6 @@ void printIntroMessage(void)
 	sleep(1.5);
 	printf(".");
 	sleep(1.5);
-	printf(".");
+	printf(".\n\n");
 	sleep(1.5);
 }
