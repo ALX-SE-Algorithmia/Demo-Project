@@ -13,7 +13,8 @@ void printIntroMessage(void)
 {
 	printf("Thank you for using this basic calculator.\n");
 	sleep(2);
-	printf("This calculator takes in two numbers and your arithmetic operator.\n\n");
+	printf("This calculator takes in two numbers and /
+			your arithmetic operator.\n\n");
 	sleep(2);
 	printf("The arithmetic operators are:\n");
 	sleep(2);
@@ -25,7 +26,8 @@ void printIntroMessage(void)
 	sleep(1.5);
 	printf("Division: /\n");
 	sleep(2);
-	printf("\nRemember to enter valid numbers and an arithmetic operator as listed...\n\n");
+	printf("\nRemember to enter valid numbers and an /
+			arithmetic operator as listed...\n\n");
 	sleep(1.5);
 	printf(".");
 	sleep(1.5);
