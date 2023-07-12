@@ -1,6 +1,8 @@
 #include <string.h>    /* The C standard file for strings */
 #include <stdlib.h>    /* To use stanard library functions */
 #include <unistd.h>  /* For the sleep() function */
+#include <stdlib.h>  /* To include standard library functions */
+#include <stdio.h>   /* To include standard input and output functions */
 
 /**
  * storeUsername - Stores the username from standard input.

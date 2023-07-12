@@ -65,6 +65,8 @@ int main(void)
 
 	/* End of calculator */
 	exitMessage();
+	printf("Goodbye, %s!\n", username);
+	sleep(2);
 
 	return (0);
 }
