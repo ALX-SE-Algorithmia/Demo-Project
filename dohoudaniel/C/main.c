@@ -47,7 +47,6 @@ int main(void)
 		exit(EXIT_FAILURE);    /* Program exits if user's operator is invalid */
 	}
 
-
 	/* Storing the arithmetic operator of the user */
 	getchar();  /* Clear input buffer */
 	printf("Enter your arithmetic operator: ");
