@@ -24,6 +24,7 @@ double performCalculation(double num1, double num2, char operator)
 			break;
 		case '*':
 			solution = mult(num1, num2);
+			break;
 		case '/':
 			solution = divide(num1, num2);
 			break;
