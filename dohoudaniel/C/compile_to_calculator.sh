@@ -2,4 +2,4 @@
 
 # This file compiles all the necessary C files into a calculator.
 
-gcc *.c -o dohou_calculator
+gcc *.c *.h -o dohou_calculator
