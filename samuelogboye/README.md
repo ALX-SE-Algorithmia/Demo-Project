@@ -1,5 +1,5 @@
 # Calculator
-This is a simple calculator program written in C. It allows users to perform basic and advanced mathematical operations. Users can choose between addition, subtraction, multiplication, division, exponentiation, and advanced functionalities such as square root, logarithm, and trigonometric operations.
+This is a simple calculator program written in C language.  It allows users to perform basic and advanced mathematical operations. Users can choose between addition, subtraction, multiplication, division, exponentiation, and advanced functionalities such as square root, logarithm, and trigonometric operations.
 
 ## Getting Started
 To compile and run the calculator program, follow these steps:

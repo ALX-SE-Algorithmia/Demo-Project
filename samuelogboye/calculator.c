@@ -2,7 +2,7 @@
 
 /**
  * BasicOp - a function that performs basic operations
- * @first_num: the first number to work with
+ * @first_num: first number to work with
  * @second_num: the second number to work with
  * @operand: operand to perform the operation
  * Return: the final result

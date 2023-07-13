@@ -9,7 +9,7 @@
 /**
  * OperandChoice - Structure representing the choice of operands
  *
- * @operand:      The selected operand
+ * @operand:      The selected operands
  * @name:         The name associated with the choice
  * @first_number: The first number for the operation
  */
