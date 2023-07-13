@@ -27,9 +27,9 @@ int main(void)
 			if (num2 != 2)
 				printf("\\%.0f|%.4f = %.4f\n\n", num2, num1, result);
 			else
-				printf("\\|%.4f = %.4f\n\n", num1, result);
+				printf("\\|%.4f = %.4f\n\n\n", num1, result);
 		else if (check_trig(operator))
-			printf("%s(%.2f) = %.4f\n", operator, num1, result);
+			printf("%s(%0.2f) = %.4f\n\n", operator, num1, result);
 		else
 			printf("%.4f %s %.4f = %.4f\n\n", num1, operator, num2, result);
 		free(operator);
