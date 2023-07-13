@@ -1,8 +1,8 @@
-###SIMPLE CALCULATOR WRITTEN IN C
+### SIMPLE CALCULATOR WRITTEN IN C
 -----------------------------------------------------------------------------------------------------
 This is a simple calculator written in c that takes in user input and performs mathmatics calculations
 
-###FEATURES
+### FEATURES
 -----------------------------------------------------------------------------------------------------
 This Calculator performs the following operation:
 
@@ -11,7 +11,7 @@ This Calculator performs the following operation:
 3. substraction (-)
 4. Division (/)
 
-###COMPILATION
+### COMPILATION
 -------------------------------------------------------------------------------------------------------
 1. Open your terminal
 2. Navigate to the directory:
@@ -27,14 +27,14 @@ This Calculator performs the following operation:
       ./calc
     ```
 
-###USAGE
+### USAGE
 -----------------------------------------------------------------------------------------------------------
 1. Everything will be cleared on the screen and you will be prompted to "enter value1: "
 2. Second prompt you will asked to choose operator of your choice["+". "-", "*", "/"]: 
 3. Third prompt you will be asked to "enter value2: "
 4. Lastly result will be printed on your terminal
 
-###EXIT
+### EXIT
 -----------------------------------------------------------------------------------------------------------
 To exit from the calculator, press the following keys:
     ```shell
