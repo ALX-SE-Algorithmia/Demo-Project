@@ -52,5 +52,7 @@ double cos_func(double num1, __attribute__((unused)) double num2)
  */
 double tan_func(double num1, double num2)
 {
+	if (num1 == 90)
+		printf("Math error: Tan 90 is infinite\n\n");
 	return (sin_func(num1, num2) / cos_func(num1, num2));
 }
