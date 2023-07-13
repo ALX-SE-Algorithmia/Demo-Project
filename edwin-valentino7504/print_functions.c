@@ -60,10 +60,10 @@ void welcome(void)
 	print_sleep("^ - raises first operand to power of second operand");
 	print_sleep("root - takes second operand'th root of first operand");
 	print_sleep("sin, cos & tan - takes sin, cos and tan of angle (degrees)");
-	print_sleep("\nEnter \"off\" or press Ctrl + D (except macOS) at any time to exit\n");
+	print_sleep("\nEnter \"off\" or press Ctrl + D at any time to exit\n");
 }
 /**
- * print_sleep - sleeps for 0.8s and prints
+ * print_sleep - sleeps for 1.5s and prints
  * @message: the message
  */
 void print_sleep(char *message)
