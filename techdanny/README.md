@@ -30,9 +30,9 @@ This Calculator performs the following operation:
 ### USAGE
 -----------------------------------------------------------------------------------------------------------
 1. Everything will be cleared on the screen and you will be prompted to "enter value1: "
-2. Second prompt you will asked to choose operator of your choice["+". "-", "*", "/"]: 
-3. Third prompt you will be asked to "enter value2: "
-4. Lastly result will be printed on your terminal
+2. Second prompt, you will be asked to choose operator of your choice["+". "-", "*", "/"]: 
+3. Third prompt, you will be asked to "enter value2: "
+4. Lastly, result will be printed on your terminal
 
 ### EXIT
 -----------------------------------------------------------------------------------------------------------
