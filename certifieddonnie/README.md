@@ -23,7 +23,7 @@ on how to collaborate on future projects.
 Irrespective of your System O.S, Follow these steps:
 
 1. Clone the repository -> [Demo-Project-Repository](https://github.com/ALX-SE-Algorithmia/Demo-Project)
-2. Change Directory to `Demo-Project/Certifieddonnie-C`
+2. Change Directory to `Demo-Project/certifieddonnie`
 3. Run the MakeFile => `make -f compiler all`
 4. Run the Compiled Executable => `./calculator`
 5. Enjoy the prompts and use the program.
