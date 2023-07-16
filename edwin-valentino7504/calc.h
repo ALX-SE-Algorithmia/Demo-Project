@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <ctype.h>
+#include <math.h>
 #define PI 3.1415926535
 /**
  * struct calc_operation_s - this is a struct that holds

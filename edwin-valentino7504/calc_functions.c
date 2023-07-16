@@ -39,5 +39,7 @@ double multiply(double num1, double num2)
  */
 double divide(double num1, double num2)
 {
+	if (num2 == 0)
+		printf("Zero Division error\n\n");
 	return (num1 / num2);
 }
