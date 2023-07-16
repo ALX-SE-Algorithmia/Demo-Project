@@ -52,3 +52,36 @@ For memory operations (mem), a message is displayed indicating that memory opera
 The default case handles the scenario when an invalid operator is entered, and an error message is displayed.
 
 To add memory location functionality, you can declare a variable to store the memory value, and then include additional cases in the switch statement to handle memory-related operations such as storing a value in memory, recalling the stored value, adding or subtracting from the stored value, or clearing the memory. You would need to prompt the user for additional input and perform the corresponding operations based on the selected memory operation.
+
+# How to run the program
+
+To run the code, you can follow these steps:
+
+Open a text editor and create a new file. Copy the entire code into the file.
+
+Save the file with a ".c" extension, for example, "calc.c".
+
+Open a command prompt or terminal and navigate to the directory where you saved the "calc.c" file.
+
+Compile the code using a C compiler. For example, if you have the GCC compiler installed, you can use the following command:
+
+
+gcc calc.c -o calc
+This will generate an executable file named "calc" in the same directory.
+
+Run the executable by executing the following command:
+
+./calc
+The program will prompt you to enter an operator. You can choose one of the available operators: '+', '-', '*', '/', '^', 'sqrt', '%', 'A', '!', 'L', 'S', 'C', 'T', 'M'.
+
+Depending on the selected operator, the program will prompt you for the required input (e.g., numbers for arithmetic operations, base and exponent for exponentiation, etc.).
+
+Enter the required input and press Enter.
+
+The program will perform the requested operation and display the result.
+
+You can continue using the calculator by entering another operator or terminate the program by closing the command prompt or pressing Ctrl+C.
+
+Make sure you have a C compiler installed on your system and the necessary libraries (such as math.h) available. If you encounter any errors during compilation or execution, check your environment setup and ensure that the required dependencies are properly installed.
+
+Note: The memory operations (M) are not implemented in this code and are indicated by a message. You can modify the code to include the desired functionality for memory operations as discussed earlier.
