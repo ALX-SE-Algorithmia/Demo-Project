@@ -14,3 +14,41 @@ Then, the BMI is calculated by dividing the weight (in kilograms) by the square 
 Finally, we use the 'printf' function to again display the calculated BMI to the user, with a prescision to two decimal places
 
 the code ends by returning 0 to indicate a successful execution
+
+# Calculator Implementation
+I have added the calc.c file to implement the calculator functionality 
+
+I was not able to implement the memory allocation
+feature in this code.
+
+Two helper functions, getValidNumber() and getValidOperator(), are defined to handle input validation and error handling. These functions ensure that the user enters valid numbers and valid operators.
+
+The main function begins by declaring variables to store the operator, two numbers, and the result.
+
+The user is prompted to enter an operator using the printf function, and the getValidOperator() function is called to read a valid operator from the user.
+
+A switch statement is used to perform different operations based on the selected operator.
+
+Each case handles a specific operation:
+
+For arithmetic operations (+, -, *, /), the user is prompted to enter two numbers using the printf function, and the getValidNumber() function is called to read valid numbers. The corresponding arithmetic operation is performed, and the result is displayed.
+
+For exponentiation (^), the user is prompted to enter the base and exponent using the printf function, and the getValidNumber() function is called to read valid numbers. The pow() function from math.h is used to calculate the result, and it is displayed.
+
+For square root (sqrt), the user is prompted to enter a number using the printf function, and the getValidNumber() function is called to read a valid number. The sqrt() function from math.h is used to calculate the result, and it is displayed. An error message is shown if the user enters a negative number.
+
+For percentage (%), the user is prompted to enter a number and a percentage value using the printf function, and the getValidNumber() function is called to read valid numbers. The result is calculated as the product of the number and the percentage divided by 100, and it is displayed.
+
+For absolute value (abs), the user is prompted to enter a number using the printf function, and the getValidNumber() function is called to read a valid number. The fabs() function from math.h is used to calculate the absolute value, and it is displayed.
+
+For factorial (!), the user is prompted to enter a non-negative integer using the printf function, and the getValidNumber() function is called to read a valid number. The result is calculated using a loop, and it is displayed. An error message is shown if the user enters a negative number or a non-integer value.
+
+For logarithm (log), the user is prompted to enter a number and a base using the printf function, and the getValidNumber() function is called to read valid numbers. The result is calculated using the log() function from math.h, and it is displayed. Error messages are shown if the user enters invalid values, such as a negative number, a base of 1, or a base that is not a positive number.
+
+For trigonometric functions (sin, cos, tan), the user is prompted to enter an angle in degrees using the printf function, and the getValidNumber() function is called to read a valid number. The angle is converted to radians, and the corresponding trigonometric function from math.h is used to calculate the result. The result is displayed.
+
+For memory operations (mem), a message is displayed indicating that memory operations are not implemented in this code.
+
+The default case handles the scenario when an invalid operator is entered, and an error message is displayed.
+
+To add memory location functionality, you can declare a variable to store the memory value, and then include additional cases in the switch statement to handle memory-related operations such as storing a value in memory, recalling the stored value, adding or subtracting from the stored value, or clearing the memory. You would need to prompt the user for additional input and perform the corresponding operations based on the selected memory operation.
