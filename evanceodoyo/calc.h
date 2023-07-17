@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdbool.h>
 #include <math.h>
 
 /* Function declartions */
@@ -21,14 +20,12 @@ double logten(double a);
 int factorial(int a);
 int fib(int n);
 
-/* Validator function declarations*/
-bool is_int(double num);
-bool val_input(double num_1, double num_2);
-bool val_single_input(double num);
+/* Validator function declaration*/
+double valid_input(const char* str);
 
 /* Calculator function declarations */
-void two_operand_calc(double a, double b, int choice);
-void single_operand_calc(double a, int choice);
+void two_operand_calc(char* n, char* m, int choice);
+void single_operand_calc(char* n, int choice);
 void special_calc(int choice);
 
 #endif /* CALC_H */

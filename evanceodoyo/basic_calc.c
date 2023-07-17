@@ -44,7 +44,7 @@ double division(double a, double b)
 	if (b == 0)
 	{
 		printf("Error: Division by 0.\n");
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 	return (a / b);
 }
@@ -61,7 +61,7 @@ int mod(int a, int b)
 	if (b == 0)
 	{
 		printf("Error: Modulo by 0.\n");
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 	return (a % b);
 }

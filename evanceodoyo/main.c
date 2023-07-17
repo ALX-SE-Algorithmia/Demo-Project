@@ -21,6 +21,25 @@ void print_selection(void)
 }
 
 /**
+ * valid_input - validates user input.
+ * @str: str to validate.
+ * Return: true if str is double otherwise false.
+ */
+
+double valid_input(const char *str)
+{
+	char *endptr;
+
+	strtod(str, &endptr);
+	if (*endptr != '\0')
+	{
+		printf("Error: Input must be a double or an integer.\n");
+		exit(EXIT_FAILURE);
+	}
+	return (strtod(str, NULL));
+}
+
+/**
  * main - program entry point
  * Return: 0 on success
  */
@@ -28,7 +47,9 @@ void print_selection(void)
 int main(void)
 {
 	int choice;
-	double a, b, result;
+	char a[100];
+	char b[100];
+	double result;
 
 	printf("Welcome to C Calculator Program by Evance\n");
 	printf("============================================");
@@ -41,9 +62,9 @@ int main(void)
 		if (choice >= 1 && choice <= 5)
 		{
 			printf("Enter first number: ");
-			scanf("%lf", &a);
+			scanf("%s", a);
 			printf("Enter second number: ");
-			scanf("%lf", &b);
+			scanf("%s", b);
 
 			two_operand_calc(a, b, choice);
 		}
@@ -54,13 +75,13 @@ int main(void)
 		else if (choice > 7 && choice <= 10)
 		{
 			printf("Enter number: ");
-			scanf("%lf", &a);
+			scanf("%s", a);
 			single_operand_calc(a, choice);
 		}
 		else
 		{
 			printf("Error: Invalid input.\n");
-			exit(1);
+			exit(EXIT_FAILURE);
 		}
 	}
 }

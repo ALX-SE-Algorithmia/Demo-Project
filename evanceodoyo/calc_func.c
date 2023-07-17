@@ -2,16 +2,17 @@
 
 /**
  * two_operand_calc - performs basic calculations on two operands
- * @a: first operand
- * @b: second operand
+ * @n: first operand
+ * @m: second operand
  * @choice: choice of operation
  * Return: void
  */
-void two_operand_calc(double a, double b, int choice)
+void two_operand_calc(char *n, char *m, int choice)
 {
+	double a = valid_input(n);
+	double b = valid_input(m);
 	double result;
 
-	val_input(a, b);
 	switch (choice)
 	{
 		case 1:
@@ -41,30 +42,29 @@ void two_operand_calc(double a, double b, int choice)
 
 /**
  * single_operand_calc - performs basic calculations on one operand
- * @a: operand
+ * @n: operand
  * @choice: choice of operation
  * Return: void
  */
-void single_operand_calc(double a, int choice)
+void single_operand_calc(char *n, int choice)
 {
-	unsigned long long result;
-	double res;
+	double a = valid_input(n);
+	unsigned long long l_result;
+	double result;
 
-	// val_single_input(a);
-	val_input(a, 0);
 	switch (choice)
 	{
 		case 8:
-			res = logten(a);
-			printf("log\u2081\u2080(%.2lf) = %.2lf\n", a, res);
+			result = logten(a);
+			printf("log\u2081\u2080(%.2lf) = %.2lf\n", a, result);
 			break;
 		case 9:
-			result = factorial(a);
-			printf("%.0lf! = %llu\n", a, result);
+			l_result = factorial((int)(a));
+			printf("%.0lf! = %llu\n", a, l_result);
 			break;
 		case 10:
-			result = fib(a);
-			printf("Fibonacci of %.0lf = %llu\n", a, result);
+			l_result = fib((int)(a));
+			printf("Fibonacci of %.0lf = %llu\n", a, l_result);
 			break;
 	}
 }
@@ -76,26 +76,34 @@ void single_operand_calc(double a, int choice)
  */
 void special_calc(int choice)
 {
+	char n[100];
+	char m[100];
 	double a, b, result;
 
 	switch (choice)
 	{
 		case 6:
 			printf("Enter \u221Aroot: ");
-			scanf("%lf", &a);
+			scanf("%s", n);
 			printf("Enter n\u221A: ");
-			scanf("%lf", &b);
-			val_input(a, b);
+			scanf("%s", m);
+
+			a = valid_input(n);
+			b = valid_input(m);
 			result = root(a, b);
+
 			printf("%.2lf\u221A%.2lf = %.2lf\n", b, a, result);
 			break;
 		case 7:
 			printf("Enter base: ");
-			scanf("%lf", &a);
+			scanf("%s", n);
 			printf("Enter exponent: ");
-			scanf("%lf", &b);
-			val_input(a, b);
+			scanf("%s", m);
+
+			a = valid_input(n);
+			b = valid_input(m);
 			result = exponent(a, b);
+
 			printf("%.2lf ^ %.2lf = %.2lf\n", a, b, result);
 			break;
 	}

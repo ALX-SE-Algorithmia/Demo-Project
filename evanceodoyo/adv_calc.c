@@ -37,7 +37,7 @@ double logten(double a)
 	if (a <= 0)
 	{
 		printf("Error: Log of 0 or a negative number.\n");
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 	return (log10(a));
 }
@@ -55,7 +55,7 @@ int factorial(int a)
 	if (a < 0)
 	{
 		printf("Error: Factorial of a negative number.\n");
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 
 	for (int i = 2; i <= a; i++)
@@ -86,45 +86,4 @@ int fib(int n)
 		b = result;
 	}
 	return (result);
-}
-
-/**
- * is_int - checks if a number is an integer
- * @num: number to check
- * Return: true if num is an integer, false otherwise
- */
-bool is_int(double num)
-{
-	return (num == (int)num);
-}
-
-/**
- * val_input - validates input
- * @a: number to check
- * @b: number to check
- * Return: true if num is an integer/doubled, false otherwise
- */
-bool val_input(double a, double b)
-{
-	if (!(is_int(a) || is_int(b)))
-	{
-		printf("Error: Input must be a double or an integer.\n");
-		exit(1);
-	}
-	return (true);
-}
-
-/**
- * val_single_input - validates input
- * @num: number to check
- * Return: true if num is an integer, false otherwise
- */
-bool val_single_input(double num)
-{
-	if (!is_int(num))
-	{
-		printf("Error: Input must be a double or an integer.\n");
-		exit(1);
-	}
-	return (true);
 }
