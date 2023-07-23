@@ -52,7 +52,7 @@ int sub(int a, int b)
 * return: always(success)
 */
 
-int div(int a, int b)
+int divz(int a, int b)
 {
 	return (a / b);
 }
@@ -66,14 +66,14 @@ int div(int a, int b)
 * return: always(success)
 */
 
-void opr(char c)
+int opr(char *c, int first_num, int second_num)
 {
-	if(c == '+')
-		add(first_num, second_num);
-	else if(c == '*')
-		mul(first_num, second_num);
-	else if(c == '-')
-		sub(first_num, second_num);
-	else if(c == '/')
-		div(first_num, second_num);
+	if(c[0] == '+')
+		return add(first_num, second_num);
+	else if(c[0] == '*')
+		return mul(first_num, second_num);
+	else if(c[0] == '-')
+		return sub(first_num, second_num);
+	else if(c[0] == '/')
+		return divz(first_num, second_num);
 }
