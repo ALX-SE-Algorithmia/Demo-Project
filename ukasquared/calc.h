@@ -3,11 +3,12 @@
 
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 int add(int,int);
 int mul(int,int);
 int sub(int,int);
-int div(int,int);
-void opr(char);
+int divz(int,int);
+int opr(char *c, int, int);
 
 #endif
