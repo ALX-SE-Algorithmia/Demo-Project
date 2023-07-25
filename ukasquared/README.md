@@ -13,5 +13,5 @@ This is a computational program which is built to assist in basic calculations o
 ## Compilation
 To use this calculation, follow the below steps:
 - [] using your terminal
-- [] run gcc main.c calc/_func.c
-- [] run ./a.out
+- [] run gcc main.c calc_func.c -o calculate
+- [] run ./calculate
