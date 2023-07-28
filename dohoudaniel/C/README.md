@@ -12,3 +12,8 @@ This is a calculator that prompt the user to enter two numbers and an arithmetic
 4. Division ('/')
 
 *All C files in this directory have been betty checked.*
+
+## How To Use This Calculator
+- Clone the repo to your local machine.
+- Navigate into this directory.
+- Run the Bash script <a href="https://github.com/ALX-SE-Algorithmia/Demo-Project/blob/main/dohoudaniel/C/compile_to_calculator.sh">compile_to_calculator.sh</a>. The calculator interface will print!
