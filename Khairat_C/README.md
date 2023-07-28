@@ -1,7 +1,7 @@
 # A BASIC CALCULATOR CREATED BY KHAIRAT
 
 ## Introduction
-This is a simple command-line calculator program written in C. It  allows users to perform basic arithmetic operations such as addition, subraction, multiplication and division.
+This is a simple command-line calculator program written in C. It  allows users to perform basic arithmetic operations such as addition, subtraction, multiplication and division.
 
 ## Instructions
 
