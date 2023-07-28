@@ -13,7 +13,7 @@ void welcome_prompt(void)
 	printf("2. Enter a basic operator using the sign by the side ");
 	printf("of the operator.\n\n");
 	printf("+ -> Addition.\n");
-	printf("- -> Subraction.\n");
+	printf("- -> Subtraction.\n");
 	printf("* -> Multiplication.\n");
 	printf("/ -> Division.\n\n");
 	printf("NOTE::: When an error meassage is encountered click enter ");
