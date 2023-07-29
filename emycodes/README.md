@@ -4,10 +4,10 @@ This is a console-based simple calculator program written in C that performs bas
 
 ## How to Use
 
-1. Clone the repository or download the `calculator.c` file to your local machine.
+1. Clone the repository or download the `emycodes.c` file to your local machine.
 
 2. Compile the C code using a C compiler (e.g., GCC) with the following command:
 
    ```bash
-   gcc calculator.c -o calculator
+   gcc emycodes.c -o calculator
 
