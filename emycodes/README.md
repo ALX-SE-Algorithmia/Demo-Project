@@ -13,13 +13,13 @@ This is a console-based simple calculator program written in C that performs bas
    ```
 3. Symbol Representation:
    
-   *Addition*         -    `+`
+   **Addition**         -    `+`
 
-   *Subtraction*      -    `-`
+   **Subtraction**      -    `-`
 
-   *Multiplication*   -    `*`
+   **Multiplication**   -    `*`
 
-   *Division*         -    `/`
+   **Division**         -    `/`
 
 ## Output
 
