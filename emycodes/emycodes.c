@@ -21,5 +21,31 @@ int main(void) {
             printf("Error: Invalid operator. Please try again.\n");
     }
 
+
+    printf("Enter second number: ");
+    scanf("%lf", &num2);
+
+    // Perform the selected operation
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            // Division by zero check
+            if (num2 != 0) {
+                result = num1 / num2;
+            } else {
+                printf("Error: Division by zero is not allowed.\n");
+                return 1; // Exit the program with an error code
+            }
+            break;
+    }
+
     return (0);
 
