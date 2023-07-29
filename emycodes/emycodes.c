@@ -9,3 +9,8 @@ int main(void) {
     printf("Enter first number: ");
     scanf("%lf", &num1);
 
+    // Operator Input Validation Loop
+    while (1) {
+        printf("Enter an operator (+, -, *, /): ");
+        scanf(" %c", &operator);
+
