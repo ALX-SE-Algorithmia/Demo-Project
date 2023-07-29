@@ -6,16 +6,23 @@ This is a console-based simple calculator program written in C that performs bas
 
 1. Clone the repository or download the `emycodes.c` file to your local machine.
 
-2. Compile the C code using a C compiler (e.g., GCC) with the following command:
+2. Compile the C code using a C compiler (e.g., GCC) with the following command: 
 
    ```bash
    gcc emycodes.c -o emycodes
    ```
+3. Symbol Representation:
+   
+   Addition         -    `+`
+   Subtraction      -    `-`
+   Multiplication   -    `*`
+   Division         -    `/`
+
 ## Output
-```   Simple Calculator
-      Enter first number: 5.7
-      Enter an operator (+, -, *, /): *
-      Enter second number: 3.2
-      Result: 18.24
+```Simple Calculator
+   Enter first number: 5.7
+   Enter an operator (+, -, *, /): *
+   Enter second number: 3.2
+   Result: 18.24
 ```
 
