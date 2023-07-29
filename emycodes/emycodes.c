@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "emycodes.h"
 /*
  * Simple calculator program in C for
  * basic arithmetic operations on two real numbers.
@@ -29,7 +29,7 @@ scanf(" %c", &operator);
 if (operator == '+' || operator == '-' || operator == '*' || operator == '/')
     break;
 else
-    printf("Error: Invalid operator. Please try again.\n");
+    printf("Error: Invalid operator. Please try again.\n\n");
 }
 
 
