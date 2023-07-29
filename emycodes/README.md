@@ -24,19 +24,13 @@ This is a console-based simple calculator program written in C that performs bas
 ## Output
 
    **Addition**
+
     Simple Calculator
     Enter first number: 1
     Enter an operator (+, -, *, /): +
     Enter second number: 2
     Result: 3.000000
    
-   **Addition**
-    Simple Calculator
-    Enter first number: 1
-    Enter an operator (+, -, *, /): +
-    Enter second number: 2
-    Result: 3.000000
-    
    **Subtraction**
 
     Simple Calculator
