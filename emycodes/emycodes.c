@@ -14,5 +14,12 @@ int main(void) {
         printf("Enter an operator (+, -, *, /): ");
         scanf(" %c", &operator);
 
+        // Check for valid operator input
+        if (operator == '+' || operator == '-' || operator == '*' || operator == '/')
+            break;
+        else
+            printf("Error: Invalid operator. Please try again.\n");
+    }
+
     return (0);
 
