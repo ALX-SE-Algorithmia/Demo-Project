@@ -47,5 +47,8 @@ int main(void) {
             break;
     }
 
+    // Output the result
+    printf("Result: %lf\n", result);
+
     return (0);
 
