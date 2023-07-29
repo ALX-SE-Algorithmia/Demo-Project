@@ -1,4 +1,12 @@
 #include <stdio.h>
+/* Simple calculator program in C for 
+ * basic arithmetic operations on two real numbers.
+ * The user can input the first number,
+ * select an operator (+, -, *, /), and input the second number.
+ * The program displays the result with two decimal places.
+ * Proper input validation and error handling
+ * for invalid operators and division by zero are implemented.
+*/
 
 int main(void)
 {
