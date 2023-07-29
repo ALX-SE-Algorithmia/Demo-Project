@@ -22,6 +22,7 @@ This is a console-based simple calculator program written in C that performs bas
    *Division*         -    `/`
 
 ## Output
+
    **Addition**
     Simple Calculator
     Enter first number: 1
