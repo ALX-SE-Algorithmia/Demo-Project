@@ -9,5 +9,5 @@ This is a console-based simple calculator program written in C that performs bas
 2. Compile the C code using a C compiler (e.g., GCC) with the following command:
 
    ```bash
-   gcc emycodes.c -o calculator
+   gcc emycodes.c -o emycodes
 
