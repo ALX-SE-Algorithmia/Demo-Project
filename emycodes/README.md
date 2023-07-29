@@ -22,10 +22,41 @@ This is a console-based simple calculator program written in C that performs bas
    *Division*         -    `/`
 
 ## Output
-```Simple Calculator
-   Enter first number: 5.7
-   Enter an operator (+, -, *, /): *
-   Enter second number: 3.2
-   Result: 18.24
-```
+    **Addition**
+    ```bash
+    Simple Calculator
+    Enter first number: 1
+    Enter an operator (+, -, *, /): +
+    Enter second number: 2
+    Result: 3.000000
+    ```
+    
+    **Subtraction**
 
+    ```bash
+    Simple Calculator
+    Enter first number: 2
+    Enter an operator (+, -, *, /): -
+    Enter second number: 1
+    Result: 1.000000
+    ```
+
+    **Multiplication**
+
+    ```bash
+    Simple Calculator
+    Enter first number: 3
+    Enter an operator (+, -, *, /): *
+    Enter second number: 3.2
+    Result: 9.600000
+    ```
+
+    **Division**
+
+    ```bash
+    Simple Calculator
+    Enter first number: 5.7
+    Enter an operator (+, -, *, /): *
+    Enter second number: 3.2
+    Result: 1.781250
+    ```
