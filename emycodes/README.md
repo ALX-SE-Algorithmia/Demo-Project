@@ -10,4 +10,12 @@ This is a console-based simple calculator program written in C that performs bas
 
    ```bash
    gcc emycodes.c -o emycodes
+   ```
+## Output
+```   Simple Calculator
+      Enter first number: 5.7
+      Enter an operator (+, -, *, /): *
+      Enter second number: 3.2
+      Result: 18.24
+```
 
