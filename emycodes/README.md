@@ -22,8 +22,9 @@ This is a console-based simple calculator program written in C that performs bas
    *Division*         -    `/`
 
 ## Output
+
    **Addition**
-    ```bash
+   ```
     Simple Calculator
     Enter first number: 1
     Enter an operator (+, -, *, /): +
@@ -33,7 +34,7 @@ This is a console-based simple calculator program written in C that performs bas
     
    **Subtraction**
 
-    ```bash
+    ```
     Simple Calculator
     Enter first number: 2
     Enter an operator (+, -, *, /): -
@@ -43,7 +44,7 @@ This is a console-based simple calculator program written in C that performs bas
 
    **Multiplication**
 
-    ```bash
+    ```
     Simple Calculator
     Enter first number: 3
     Enter an operator (+, -, *, /): *
@@ -53,7 +54,7 @@ This is a console-based simple calculator program written in C that performs bas
 
    **Division**
 
-    ```bash
+    ```
     Simple Calculator
     Enter first number: 5.7
     Enter an operator (+, -, *, /): *
