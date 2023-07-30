@@ -41,8 +41,8 @@ def validate_num(num1):
         print("Remember to input a non-decimal number.\nTry again.")
         sleep(1)
         print("Invalid input.")
-        # exit()  # Exit if the input was not a valid number
-        return None
+        exit()  # Exit if the input was not a valid number
+        # return None
 
 
 def validate_operator(operator):
