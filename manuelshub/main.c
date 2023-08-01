@@ -35,7 +35,7 @@ int main()
 		case '+':
 			result = add(num1, num2);
 			break;
-
+ 
 		case '-':
 			result = sub(num1, num2);
 			break;
@@ -49,21 +49,20 @@ int main()
 			break;
 
 		default:
-			printf("Invalid Operator!!\n");
+			printf("Invalid Operator!!\n\n");
 			return (1);
 	}
-
-	if (result == 0.00 /*|| result < 0.00 || result > 0.00*/)
+	if (operator == '/' && num2 == 0)
 	{
-		sleep(3);
-		printf("Recompile to use again!\n");
+		sleep(1.5);
+		printf("Recompile to use again!\n\n");
 	}
 	else
 	{
 		sleep(1.5);
 		printf("\nThe result is %2lf\n", result);
 		sleep(3);
-		printf("Recompile to use again!\n");
+		printf("Recompile to use again!\n\n");
 	}
 
 	return (0);
