@@ -14,6 +14,7 @@ Subtraction: Subtract the second number from the first number and display the re
 - The calculator will prompt you to select an operation and enter two numbers. The result of the operation will be printed to the console.
 
 # Example
+
 - Addition
 
 Enter number1: 5
