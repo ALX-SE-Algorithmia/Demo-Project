@@ -20,4 +20,4 @@ All Python files in this directory have been checked with <strong><em>Pycodestyl
 
 <strong>Alternatively, you could run this command in your local repo:</strong>
 
-	<strong>python3 main.py</strong>
+	python3 main.py
