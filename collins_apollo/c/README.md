@@ -14,10 +14,7 @@ executed on the Shell Terminal.
 
 ---
 ### Usage.
- Exiting the calculator.<br>
-  <p>Press 'q' to exit calculator</p>
-
- clear screen.<br>
- <p>Press 'c' to clear the screen</p>
+ Exiting the calculator :-Press 'q' to exit calculator.<br>
+ clear screen :-Press 'c' to clear the screen
 
 
