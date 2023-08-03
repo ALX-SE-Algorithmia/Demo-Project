@@ -20,7 +20,7 @@ rl.question('Enter your username: ', (input) => {
   // Delaying the printing of username
   setTimeout(() => {
     console.log(`Welcome, ${username}`);
-    
+
     // Welcome Message
     setTimeout(() => {
       console.log('Thank you for using this calculator.');
@@ -55,7 +55,7 @@ rl.question('Enter your username: ', (input) => {
 });
 
 // Function to prompt for the numbers and operator
-function promptNumbers() {
+function promptNumbers () {
   // Prompt the user for two numbers and an arithmetic operator
   rl.question('Enter your first number: ', (input) => {
     num1 = input;
@@ -93,7 +93,7 @@ function promptNumbers() {
   });
 }
 
-function performOperation() {
+function performOperation () {
   // Typecasting before performing an arithmetic operation
   num1 = parseFloat(num1);
   num2 = parseFloat(num2);
@@ -143,4 +143,3 @@ function performOperation() {
     }, 2000);
   }, 2500);
 }
-
