@@ -1,3 +1,5 @@
+#!/usr/bin/env node // Adding portability for Linux environments.
+
 // Defining variables
 let username;
 let num1;
