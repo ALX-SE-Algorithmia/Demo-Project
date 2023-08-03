@@ -31,4 +31,4 @@ You can run the command below to compile and execute
 ---
 ### Contact
 
-You can reach me on my email at [bristarcollins@gmail.com](http://www.bristarcollins@gmail.com) 
+You can reach me on my email at [bristarcollins@gmail.com]
