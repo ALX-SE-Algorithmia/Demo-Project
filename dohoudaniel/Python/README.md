@@ -16,7 +16,7 @@ All Python files in this directory have been checked with <strong><em>Pycodestyl
 ## How To Use This Calculator
 - Clone the repo to your local machine.
 - Navigate into this directory.
-- Run the Bash script <a href="https://github.com/ALX-SE-Algorithmia/Demo-Project/blob/main/dohoudaniel/Python/run_calc.sh">run_calc.sh</a>. The calculator interface will print!
+- Run the Bash script <a href="https://github.com/dohoudaniel/Demo-Project/blob/dohoudaniel/dohoudaniel/Python/run_calc.sh">run_calc.sh</a>. The calculator interface will print!
 
 <strong>Alternatively, you could run this command in your local repo:</strong>
 
