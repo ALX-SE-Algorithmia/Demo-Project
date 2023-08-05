@@ -11,43 +11,38 @@ int main(void)
 	char operator;
 
 	printf("Enter your first number:\n");
-	
-	;
 	if ((scanf("%lf", &num1) != 1))
 	{
 		printf("You entered invalid first number !!\n");
-		exit (-1);
+		exit(-1);
 	}
 	printf("Enter your second number:\n");
-	if(scanf("%lf", &num2) != 1)
+	if (scanf("%lf", &num2) != 1)
 	{
 		printf("You entered invalid number above !!\n");
-		exit(1);
+		exit(-1);
 	}
 	printf("Please enter your arithmetic operator:\n");
 	printf("Allowed operators are: (/), (*), (+), (-)\n");
 	scanf("%s", &operator);
-
 	switch (operator)
 	{
 	case '+':
 		Result = num1 + num2;
-		printf("%.2lf\n", Result);
+		printf("%.2f\n", Result);
 		break;
 	case '-':
 		Result = num1 - num2;
-		printf("%.2lf\n", Result);
+		printf("%.2f\n", Result);
 		break;
 	case '*':
 		Result = num1 * num2;
-		printf("%.2lf\n", Result);
+		printf("%.2f\n", Result);
 		break;
 	case '/':
-		Result = num1 / num2;
-		printf("%.2lf\n", Result);
+		printf("%.2f\n", Result = num1 / num2);
 		break;
 	default:
-
 		printf("Arithmetic error, try again\n");
 		break;
 	}
