@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+ * main - entry point
+ * Return: nothing
+ */
 int main()
 {
     char operator;
@@ -25,14 +28,15 @@ int main()
         case '/':
             if (number2 != 0)
                 result = number1 / number2;
-            else {
+            else
+	    {
                 printf("Error: Cannot divide by zero.\n");
-                return 1; // Exit with an error code
+                return (1); // Exit with an error code
             }
             break;
         default:
             printf("Invalid operator.\n");
-            return 1; // Exit with an error code
+            return (1); // Exit with an error code
     }
 
     printf("Result: %.2lf\n", result);
