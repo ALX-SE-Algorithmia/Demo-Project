@@ -9,4 +9,4 @@ i.e `$ 2 + 2`, `$ 15 * 5`
 Available operations: Addition (+), Subtraction (-), Multiplication (*) and
 					  and Division (/)
 
-**Compile main.c file or execute calculator file to use**
+**Compile main.c file to an executable to use**
