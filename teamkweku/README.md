@@ -9,7 +9,7 @@
 `division`: dividing two integers. Error occures when you try to divide by a zero
 
 ## How to use program
-> compile code with the flag `gcc -Wall -pedantic -Werror -Wextra -std=gnu89 main.c operations.c`
+> compile code with the flag `gcc -Wall -pedantic -Werror -Wextra -std=gnu89 main.c operations.c -o main`
 - Addition: `$./main num1 + num2`
 - Subtraction: `$./main num1 - num2 
 - Division: `$./main num1 / num2
