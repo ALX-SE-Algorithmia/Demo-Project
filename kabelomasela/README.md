@@ -1,4 +1,6 @@
-# Basic Calculator
+
+#Basic Calculator
+
 This project is a simple calculator program implemented in C. It allows users to perform arithmetic operations by entering two numbers and an arithmetic operator. The program will then calculate the result based on the operator entered.
 
 ## Purpose
@@ -12,7 +14,7 @@ The purpose of this project is to provide an opportunity for everyone to enhance
 To use this program, follow these steps:
 
 1. Clone the repository from the following link: Demo Project Repository.
-2. Change Directory to **`DestinedCodes-c`**
+2. Change Directory to **`KabzaKole`**
 3. Compile the program using a C compiler. Example:` gcc *.c -o calc`
 4. Run the compiled executable (`./calc`).
 5. Enter two numbers and an arithmetic operator when prompted.

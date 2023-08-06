@@ -69,13 +69,13 @@ float multiplication(float x, float y) {
 }
 
 float division(float x, float y) {
-	    if (y == 0) {
-		            printf("Division by zero is not allowed\n");
-			            return 0;
-				        }
+	if (y == 0) {
+	printf("Division by zero is not allowed\n");
+	return 0;
+	}
 	        
 	        float divided = x / y;
-		    printf("%.2f / %.2f = %.2f\n", x, y, divided);
-		        return divided;
+		printf("%.2f / %.2f = %.2f\n", x, y, divided);
+		return divided;
 }
 
