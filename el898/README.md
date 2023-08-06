@@ -4,4 +4,11 @@ This is a calculator that performs simple arithmetic operation. It accepts only 
 
 #Feautures
 
-*Addition
+- Addition
+- Subtraction
+- Modulo
+- Multiplication
+- Division
+
+
+## Usage
