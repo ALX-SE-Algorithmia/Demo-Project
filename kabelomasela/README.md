@@ -1,7 +1,4 @@
-
 #Basic Calculator
-
-This project is a simple calculator program implemented in C. It allows users to perform arithmetic operations by entering two numbers and an arithmetic operator. The program will then calculate the result based on the operator entered.
 
 ## Purpose
 The purpose of this project is to provide an opportunity for everyone to enhance their knowledge of the C programming language. It also serves as a demonstration of collaboration skills for future projects.
