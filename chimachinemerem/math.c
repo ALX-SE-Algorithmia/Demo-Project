@@ -7,7 +7,7 @@
  * Return: sum of a and b
  */
 
-double add(double a, double b)
+float add(float a, float b)
 {
 	return (a + b);
 }
@@ -21,19 +21,19 @@ double add(double a, double b)
  * Return: Xply of a and b
  */
 
-double mul(double a, double b)
+float mul(float a, float b)
 {
 	return (a * b);
 }
 
 /**
- * div - divides two integers
+ * divs - divides two integers
  * @a: first number
  * @b: second number
  * Return: division of a and b
  */
 
-double div(double a, double b)
+float divs(float a, float b)
 {
 	return (a / b);
 }
@@ -46,20 +46,35 @@ double div(double a, double b)
  * Return: subtraction of a and b
  */
 
-double sub(double a, double b)
+float sub(float a, float b)
 {
 	return (a - b);
 }
 
-
 /**
- * mod - module two integers
- * @a: first number
- * @b: second number
- * Return: remainder
+ * calculate_inputs - This function calculates inputes and print result
+ * @num: first input number
+ * @args: operators and numbers added to a struct
  */
 
-double mod(double a, double b)
+void calculate_input(float num, input_t *args, sg_t *op, int t)
 {
-	return (a % b);
+	int i, j;
+	float t_num;
+
+	for (i = 0; i < t; i++)
+	{
+		for (j = 0; op[j].s != NULL; j++)
+		{
+			if (args[i].sym == op[j].s)
+			{
+				if ( i == 0)
+					t_num = op[j].f(num, args[i].num);
+				else
+					t_num = op[j].f(t_num, args[i].num);
+			}
+		}
+	}
+	printf("%2.f\n", t_num);
+	return;
 }

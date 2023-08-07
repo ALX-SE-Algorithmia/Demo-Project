@@ -41,9 +41,9 @@ void display(void)
 	else if (pid == 0)
 	{
 		printf("\n\n");
-		printf("\t\t\t\t\t\t***WELCOME!!***\n");
-		printf("\t\t\t\t***PLEASE NOTE THIS CALCULATOR IS STILL***\t\n");
-		printf("\t\t\t\t***UNDER CONSTRUCTION, USE WITH CAUTION!!!***\t\n");
+		printf("\t\t\t\t\t\t\t***WELCOME!!***\n");
+		printf("\t\t\t\t\t***PLEASE NOTE THIS CALCULATOR IS STILL***\n");
+		printf("\t\t\t\t\t***UNDER CONSTRUCTION, USE WITH CAUTION!!!***\n");
 		sleep(5);
 		execv("/bin/clear", args);
 	}
@@ -53,7 +53,7 @@ void display(void)
 	}
 	str = "\t\t\t\t***TYPE 'clear' TO CLEAR CONSOLE OR \
 'quit' TO EXIT CALCULATOR***\n";
-	ins = "\t\t\t\t***REMEMBER TO PARSE SPACE IN-BETWEEN NUMBERS AND SIGNS\n\
+	ins = "\t\t\t\t***REMEMBER TO PARSE SPACE IN-BETWEEN NUMBERS AND OPERATORS\n\
 \t\t\t\tFOR INSTANCE:\n\t\t\t\t\t223 + 221 * 23";
 	print(str);
 	print(ins);
