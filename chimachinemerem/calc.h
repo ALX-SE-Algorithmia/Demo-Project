@@ -41,7 +41,7 @@ void recieve_arg(char *buf);
 void calculate_input(float num, input_t *args, sg_t *op, int t);
 void sort_args(char **args);
 void error(char *var, int error_no);
-int operation(sg_t *op, char *sym, int flag);
+int operation(sg_t *sym, char *arg, int flag);
 void print(char *str);
 float add(float a, float b);
 float mul(float a, float b);

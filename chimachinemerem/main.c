@@ -206,19 +206,19 @@ void error(char *var, int error_no)
  * Return: 0 success
  */
 
-int operation(sg_t *op, char *sym, int flag)
+int operation(sg_t *sym, char *arg, int flag)
 {
 	long int i;
 	char *end;
 
-	for (i = 0; op[i].s != NULL; i++)
+	for (i = 0; sym[i].s != NULL; i++)
 	{
-		if (op[i].s == sym)
+		if (sym[i].s == arg)
 			return (0);
 	}
 	if (flag == 1)
 	{
-		i = strtol(sym, &end, 10);
+		i = strtol(arg, &end, 10);
 		if (*end == '\0')
 			return (2);
 	}
