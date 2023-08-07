@@ -1,4 +1,9 @@
+#include <ctype.h>
+#include  <math.h>
+#include "num_stack.h"
+#include "op_stack.h"
 #include "calculator.h"
+
 
 /**
  * calculate - Takes a operation description string as
@@ -7,92 +12,96 @@
  * @op: A char pointer containing a 'string' description of
  *      the operation to perform.
  *
- * Return: Float, the result of the operation.
+ * Return: Int, the result of the operation.
  */
-float calculate(char *op)
+int calculate(char *op)
 {
-	char *next;
-	float res;
-	char operator;
+	int oplen, n;
+	num_stack_t *nstack;
+	op_stack_t *opstack, *cur_op;
+	char cur;
 
-	next = strtok(op, " ");
-	res = 0.0;
-	operator = '\0';
-	/**
-	 * TODO: evaluate the result using stacks DSA.
-	 */
-	while (next != NULL)
+	oplen = strlen(op);
+	nstack = create_num_stack();
+	opstack = create_op_stack();
+	for (int i = 0; op[i] != '\0'; i++)
 	{
-		if (strlen(next) == 1 && isOperator(next[0]))
+		cur = op[i];
+		if (isdigit(cur))
 		{
-			operator = next[0];
-		}
-		else if (isFloat(next))
-		{
-			if (res == 0.0)
-				res = strtof(next, NULL);
-			else if (operator != '\0')
+			n = 0;
+			while (isdigit(cur))
 			{
-				res = evaluate(res, strtof(next, NULL), operator);
+				n = n * 10 + (cur - '0');
+				i++;
+				if (i < oplen)
+					cur = op[i];
+				else
+					break;
 			}
+			i--;
+			push_num(&nstack, n);
 		}
-		else
-			exit(0);
-		next = strtok(NULL, " ");
+		else if (cur == '(')
+			push_op(&opstack, cur);
+		else if (cur == ')')
+		{
+			while (opstack != NULL && opstack->op != '(')
+				push_num(&nstack, evaluate(&nstack, &opstack));
+			pop_op(&opstack);
+		}
+		else if (isOperator(cur))
+		{
+			while (opstack &&
+			       precedence(cur) <= precedence(opstack->op))
+				push_num(&nstack, evaluate(&nstack, &opstack));
+			push_op(&opstack, cur);
+		}
 	}
 
-	return (res);
+	while (opstack && isOperator(opstack->op))
+		push_num(&nstack, evaluate(&nstack, &opstack));
+	return (nstack->n);
 }
 
 
 /**
  * evaluate - evaluates the result of operator
  *            applied on a and b.
- * @a: the first number
- * @b: the second number
- * @c: the operator symbol
+ * @nstack: the operand stack.
+ * @opstack: the operator stack.
  * Return: The result.
  */
-float evaluate(float a, float b, char c)
+int evaluate(num_stack_t **nstack, op_stack_t **opstack)
 {
+	int a, b;
+	op_stack_t *op;
 
-	switch (c)
+	a = pop_num(nstack)->n;
+	b = pop_num(nstack)->n;
+	op = pop_op(opstack);
+	switch (op->op)
 	{
 		case '+':
 			return (a + b);
 		case '-':
-			return (a - b);
+			return (b - a);
 		case '*':
 			return (a * b);
+		case '^':
+			return pow(b, a);
 		case '/':
-			return (a / b);
+			if (a == 0)
+			{
+				printf("Division by 0\n");
+				exit(1);
+			}
+			return (b / a);
 	}
 
-	printf("Operator '%c' not supported.\n", c);
-	exit(0);
+	exit(1);
 }
 
-/**
- * isFloat - Checks if an string is a valid
- *           representation of a float number.
- * @op: The string to check.
- *
- * Return: 1 if valid otherwise 0.
- */
-char isFloat(char *op)
-{
-	int opSize;
-
-	opSize = strlen(op);
-	for (int i = 0; i < opSize; i++)
-	{
-		if (!isOperator(op[0]) && op[i] != '.' &&
-		    (op[i] < '0' || op[i] > '9'))
-		return (0);
-	}
-
-	return (1);
-}
 
 /**
  * precedence - Returns the precendente of an
@@ -111,8 +120,7 @@ char precedence(char op)
 		case '*':
 		case '/':
 			return (2);
-		case '(':
-		case ')':
+		case '^':
 			return (3);
 		default:
 			return (-1);
@@ -130,7 +138,7 @@ char isOperator(char op)
 {
 	if (op == '-' || op == '+' ||
 	    op == '/' || op == '*' ||
-	    op == '(' || op == ')')
+	    op == '*' || op == '^')
 		return (1);
 	return (0);
 }

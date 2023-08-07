@@ -4,17 +4,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include "op_stack.h"
+#include "num_stack.h"
 
 #define INPUT_BUFF_SIZE 200
 
-float calculate(char *op);
-char isValid(char *op);
+int calculate(char *op);
 char precedence(char op);
 char isOperator(char op);
-char isValid(char *op);
-char isFloat(char *op);
-char precedence(char op);
-char isOperator(char op);
-float evaluate(float a, float b, char c);
-
+int evaluate(num_stack_t **nstack, op_stack_t **opstack);
 #endif /* CALC_H */

@@ -33,7 +33,7 @@ int main(int ac, char **av)
 		if (strcmp(op, "QUIT") == 0)
 			break;
 
-		printf("(SCP): %f\n", calculate(op));
+		printf("(SCP): %d\n", calculate(op));
 	} while (input != NULL);
 
 	free(input);
