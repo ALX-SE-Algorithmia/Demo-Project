@@ -17,7 +17,7 @@
  * return 0
  */
 
-int operator(double num1, double num2, char operand)
+int operation(double num1, double num2, char operand)
 {
     printf("\nEnter your first number: ");
     scanf("%lf", &num1);
