@@ -5,10 +5,10 @@
  * @a: first input.
  * @b: Second input.
  */
-int add(int a, int b);
-int subtract(int a, int b);
-int multiply(int a, int b);
-int divide(int a, int b);
+int addition(int a, int b);
+int subtraction(int a, int b);
+int multiplication(int a, int b);
+int division(int a, int b);
 int modulo(int a, int b);
 
 #endif
