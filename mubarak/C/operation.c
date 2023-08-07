@@ -16,7 +16,7 @@
  * return 0
  */
 
-int main()
+int operator(double num1, double num2, char operand)
 {
     printf("Welcome!\n");
     sleep(1);
@@ -32,9 +32,6 @@ int main()
     printf("* - Multiplication\n");
     printf("/ - Division\n");
     sleep(1);
-
-    double num1, num2;
-    char operand;
 
     printf("\nEnter your first number: ");
     scanf("%lf", &num1);
