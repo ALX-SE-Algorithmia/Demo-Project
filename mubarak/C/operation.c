@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include "main.h"
 
 /**
  * operation function for the Calculator
@@ -18,21 +19,6 @@
 
 int operator(double num1, double num2, char operand)
 {
-    printf("Welcome!\n");
-    sleep(1);
-    printf("Thank you for using Mubarak's Basic Calculator.\n");
-    printf("This Calculator takes in two numbers and your arithmetic operator.\n");
-    
-    printf("\n");
-
-    sleep(1);
-    printf("The arithmetic operators available are:\n");
-    printf("+ - Addition\n");
-    printf("- - Subtraction\n");
-    printf("* - Multiplication\n");
-    printf("/ - Division\n");
-    sleep(1);
-
     printf("\nEnter your first number: ");
     scanf("%lf", &num1);
 
