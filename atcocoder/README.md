@@ -6,5 +6,7 @@ This is a simple calculator program written in c. Purely for the Algorithmia Dem
 1. Clone this repo
 2. Navigate to this directory.
 3. Compile of code using the command below:
-`$ gcc *.c -o simple_calculator
- $ ./simple_calculator`
+        ```
+        $ gcc *.c -o simple_calculator
+        $ ./simple_calculator
+        ```
