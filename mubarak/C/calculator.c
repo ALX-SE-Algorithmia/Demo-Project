@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "operation.c"
 
 /**
  * Basic Calculator - perform basic arithmetic operation and print answer
@@ -35,9 +35,15 @@ int main()
 
     double num1, num2;
     char operand;
-    char 
+    int continuity;
+    
+    do
+    {
+        operation(num1, num2, operand);
 
-    operation(num1, num2, operand);
+        printf("Do you want to continue using the calculator?(1: Yes, 0: No): ");
+		scanf("%d", &continuity);
+    } while (continuity == 1);
 
     return 0;
 }
