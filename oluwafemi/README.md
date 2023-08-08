@@ -10,10 +10,11 @@ Decimals numbers are also allowed i.e `$ 3.0 + 4.0`, `$ 8.4/3.5`
 
 All results are displayed to 2 decimal places
 
-Available operations: -Addition (+), 
-					  -Subtraction (-), 
-					  -Multiplication (*)
-					  -Division (/)
+*Available operations:*
+	* Addition (+)
+	* Subtraction (-)
+	* Multiplication (*)
+	* Division (/)
 
 To exit the program enter q or Q
 
