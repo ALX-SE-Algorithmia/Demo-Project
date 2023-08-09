@@ -1,5 +1,5 @@
 # C calculator
-This directory contain the fashion of the calculator program written in C.
+This directory contain the version of the calculator program written in C.
 
 This calculator will handle only four basic operations:
         - Addition
