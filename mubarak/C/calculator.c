@@ -2,16 +2,8 @@
 #include "operation.c"
 
 /**
- * Basic Calculator - perform basic arithmetic operation and print answer
- * handle only four basic operations 
- * takes in two numbers from the user (standard input)
- * takes in an arithmetic operator for the four math operations
- * ‘+’ for Addition, ‘-’ for subtraction, ‘/’ for division, and ‘*’ for multiplication
- * performs an arithmetic operation based on the arithmetic operator
- * prints the result to the screen
- * 
- * if wrong arithmetic operator other than the one above is received...
- * or does not receive correct numbers, will print an error to the screen
+ * Basic Calculator -
+ * perform basic arithmetic operation and print answer
  * 
  * return 0
  */
