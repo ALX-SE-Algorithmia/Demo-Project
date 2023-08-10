@@ -11,8 +11,9 @@ int main(void)
 	double A, B;
 	char op;
 
-	printf("DEMO C CALCULATOR\n\n\tUsage: $ 2 * 2, $ 100 / 10\n\n");
-	printf("\tEnter any single letter i.e $ q to quit\n\n\t**Calculator**\n");
+	printf("DEMO C CALCULATOR\n\n\tUsage: $ 2 * 2, $ 100/10, $ 7.05 - 3.0\n\n");
+	printf("\tExit: enter any single letter i.e $ q or Q to exit\n\n");
+	printf("\t**Calculator**\n");
 
 	while(1)
 	{
@@ -48,17 +49,17 @@ int main(void)
 
 void addition(double a, double b)
 {
-	printf("\t= %.2lf\n", (a + b));
+	printf("\t= %.2f\n", (a + b));
 }
 
 void subtraction(double a, double b)
 {
-	printf("\t= %.2lf\n", (a - b));
+	printf("\t= %.2f\n", (a - b));
 }
 
 void multiplication(double a, double b)
 {
-	printf("\t= %.2lf\n", (a * b));
+	printf("\t= %.2f\n", (a * b));
 }
 
 void division(double a, double b)
@@ -66,5 +67,5 @@ void division(double a, double b)
 	if (b == 0.0)
 		printf("\tCan't divide by zero(0)\n");
 	else
-		printf("\t= %.2lf\n", (a / b));
+		printf("\t= %.2f\n", (a / b));
 }
