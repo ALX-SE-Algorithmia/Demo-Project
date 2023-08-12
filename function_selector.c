@@ -1,4 +1,5 @@
 #include "calc.h"
+#include <stdio.h>
 #include <string.h>
 
 void func_sel(char *c, float a, float b)
@@ -26,6 +27,7 @@ void func_sel(char *c, float a, float b)
             result = mul1(a, b);
             break;
         default:
+            result = 0;
             break;
         }
     }
