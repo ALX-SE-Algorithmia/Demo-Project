@@ -1,13 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
 #include "calc.h"
 
+/**
+ * main - this is the main function of the calculator program
+ * 
+ * Return: 0
+*/
 int main(void)
 {
     float a, b;
     char *c = malloc(sizeof(char) * 3);
 
+    printf("This calculator supports: +, -, *, **, / and %% operations\n");
     printf("Enter the first number: ");
     scanf("%f", &a);
     printf("Enter the calculation operation: ");

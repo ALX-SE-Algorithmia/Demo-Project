@@ -4,6 +4,9 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
 
 float add1(float a, float b);
 float sub1(float a, float b);

@@ -1,7 +1,13 @@
 #include "calc.h"
-#include <stdio.h>
-#include <string.h>
 
+/**
+ * func_sel - function to selection the operations
+ * @c: the operation symbol
+ * @a: the first operand
+ * @b: the second operand
+ *
+ * Return: Nothing
+*/
 void func_sel(char *c, float a, float b)
 {
     float result = 1;
