@@ -5,8 +5,8 @@
 #include <windows.h>
 #include "main.h"
 void artDisplay(void) {
-    // Clear the screen
-    system("cls");
+    
+    system("cls"); // windows clear screen
 
     // ASCII art for "calc"
     const char* calc[] = {

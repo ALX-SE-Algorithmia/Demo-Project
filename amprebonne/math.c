@@ -1,18 +1,15 @@
-#include "main.h" //includes function prototypes in main.h file
-#include <stdlib.h> //includes standard library functions
-#include <stdio.h> //includes functions for standard IO
-#include <string.h> //includes string functions
-#include <unistd.h> //includes functions for sleep
-#include <windows.h> //includes windows functions
-#include <math.h> // includes math functions
-#include <ctype.h> // includes the standard C library header file
-#include <stdbool.h> // includes for boolean statements
-bool isValidOperator(char operator) {
-    return operator == '+' || operator == '-' || operator == '*' || operator == '/';
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+#define MAX_INPUT_SIZE 2
+
+bool isValidOperator(char op) {
+    return op == '+' || op == '-' || op == '*' || op == '/';
 }
 
-int checker(float *operand1, float *operand2, char *operator) {
-    char input[100];
+int checker(float *operand1, float *operand2, char *op) {
+    char input[MAX_INPUT_SIZE + 1];
     bool validInput = false;
 
     while (!validInput) {
@@ -21,8 +18,13 @@ int checker(float *operand1, float *operand2, char *operator) {
             return 1;  // Input error
         }
 
-        if (sscanf(input, "%f%c%f", operand1, operator, operand2) == 3) {
-            if (isValidOperator(*operator)) {
+        if (strlen(input) != MAX_INPUT_SIZE + 1) {
+            printf("Invalid input length. Please use the format: operand operator operand.\n");
+            continue;
+        }
+
+        if (sscanf(input, "%f%c%f", operand1, op, operand2) == 3) {
+            if (isValidOperator(*op)) {
                 validInput = true;
             } else {
                 printf("Invalid operator. Please use +, -, *, or /.\n");
@@ -34,10 +36,11 @@ int checker(float *operand1, float *operand2, char *operator) {
 
     return 0;  // Success
 }
-int mathsFunction(void) {
+
+int mathsFunction(float operand1, float operand2, char op) {
     // Perform arithmetic operation based on operator
     float result;
-    switch (operator) {
+    switch (op) {
         case '+':
             result = operand1 + operand2;
             break;

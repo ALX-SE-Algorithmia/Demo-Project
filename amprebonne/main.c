@@ -4,14 +4,20 @@
 #include <string.h> //includes string functions
 #include <unistd.h> //includes functions for sleep
 #include <windows.h>
-/*
-main: initialise calculator
-returns: o || 1 , success or not
-*/
-int main(void)  {
-    artDisplay();
-    printIntro();
-    int checker(float *operand1, float *operand2, char *operator);
-    int mathsFunction();
-    return (0);
+int main() {
+    float operand1, operand2;
+    char operator[2];
+
+    int result = checker(&operand1, &operand2, operator);
+
+    if (result == 0) {
+        int mathResult = mathsFunction(operand1, operand2, operator[0]);
+        if (mathResult != 0) {
+            printf("Error in math calculation.\n");
+        }
+    } else {
+        printf("Error in input.\n");
+    }
+
+    return 0;
 }
