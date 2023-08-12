@@ -11,7 +11,6 @@ float mul1(float a, float b);
 float div1(float a, float b);
 float exp1(float a, float b);
 float mod1(float a, float b);
-void func_sel(char *c, float a, float b);
 float mul_exp(char *c, float a, float b);
 
 #endif
