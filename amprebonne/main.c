@@ -9,9 +9,9 @@ main: initialise calculator
 returns: o || 1 , success or not
 */
 int main(void)  {
-    //intro functions
     artDisplay();
     printIntro();
-    mathsFunction();
+    int checker(float *operand1, float *operand2, char *operator);
+    int mathsFunction();
     return (0);
 }
