@@ -1,17 +1,18 @@
-#include "main.h" //includes function prototypes in main.h file
-#include <stdlib.h> //includes standard library functions
-#include <stdio.h> //includes functions for standard IO
-#include <string.h> //includes string functions
-#include <unistd.h> //includes functions for sleep
-#include <windows.h>
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 int main() {
     float operand1, operand2;
-    char operator[2];
+    char operator;
 
-    int result = checker(&operand1, &operand2, operator);
+    artDisplay(); // Display ASCII art
+    printIntro(); // Display introductory messages
+
+    int result = checker(&operand1, &operand2, &operator);
 
     if (result == 0) {
-        int mathResult = mathsFunction(operand1, operand2, operator[0]);
+        int mathResult = mathsFunction(operand1, operand2, operator);
         if (mathResult != 0) {
             printf("Error in math calculation.\n");
         }
