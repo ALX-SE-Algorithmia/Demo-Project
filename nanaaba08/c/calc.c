@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
   * add - add two integers and return the result
@@ -23,12 +24,12 @@ int sub(int num1, int num2)
 }
 
 /**
-  * mul - multiply two integres and return the result
+  * mul - multiply two integers and return the result
   * @num1: number to multiply
-  * @num2: number to multiply
+  * @num2: second number to multiply
   * Return: 0
   */
-int mul(int num1, num2)
+int mul(int num1, int num2)
 {
 	return (num1 * num2);
 }
@@ -41,7 +42,7 @@ int mul(int num1, num2)
   */
 int div(int num1, int num2)
 {
-	if num2 == 0
+	if (num2 == 0)
 	{
 		printf("Error: Cannot divide by zero\n");
 	}
