@@ -33,7 +33,7 @@ void execute(char *path)
 void display(void)
 {
 	char *args[] = {"/bin/clear", NULL};
-	char *str, *ins;
+	char *str, *ins, *ex;
 	pid_t pid = fork();
 
 	if (pid < 0)
@@ -51,12 +51,12 @@ void display(void)
 	{
 		waitpid(pid, NULL, 0);
 	}
-	str = "\t\t\t\t***TYPE 'clear' TO CLEAR CONSOLE OR \
-'quit' TO EXIT CALCULATOR***\n";
-	ins = "\t\t\t\t***REMEMBER TO PARSE SPACE IN-BETWEEN NUMBERS AND OPERATORS\n\
-\t\t\t\tFOR INSTANCE:\n\t\t\t\t\t223 + 221 * 23";
+	str = "\t\t\t\t***TYPE 'clear' TO CLEAR CONSOLE OR 'quit' TO EXIT CALCULATOR***\n";
+	ins = "\t\t\t\t***PARSE SPACE IN-BETWEEN NUMBERS AND OPERATOR";
+	ex = "\t\t\t\tFOR INSTANCE:\n\t\t\t\t\t223 + 221";
 	print(str);
 	print(ins);
+	print(ex);
 	sleep(2);
 }
 
@@ -79,29 +79,23 @@ void handler(int sig)
  * @c: chars to remove
  */
 
-void removechars(char *str, char *c)
+void removechars(char *str, const char *c)
 {
-	int len = strlen(str), len1 = strlen(c);
-	int i, j = 0, l, remove;
+	size_t len = strlen(str), i = 0;
+	size_t dst = 0;
 
-	for (i = 0; i < len; i++)
+	while (i < len)
 	{
-		remove = 0;
-		for (l = 0; l < len1; l++)
+		if (strchr(c, str[i]) == NULL)
 		{
-			if (str[i] == c[l])
-			{
-				remove = 1;
+			str[dst++] = str[i];
+			if (str[i + 1] == '\t' || str[i + 1] == ' ')
 				break;
-			}
 		}
-		if (!remove)
-		{
-			str[i] = str[j];
-			j++;
-		}
+		i++;
 	}
-		str[j] = '\0';
+
+	str[dst] = '\0';
 }
 /**
  * print - Prints instructions to the console in slow mode
@@ -110,13 +104,13 @@ void removechars(char *str, char *c)
 
 void print(char *str)
 {
-	int i = 0;
+	int i;
 
-	for (; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		usleep(99999);
 		putchar(str[i]);
 		fflush(stdout);
 	}
-		putchar('\n');
+	putchar('\n');
 }

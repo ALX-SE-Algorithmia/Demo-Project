@@ -9,51 +9,67 @@ int main(void)
 {
 	ssize_t read;
 	size_t size = 0, count = 0;
-	char *buf = NULL;
+	char *buf = NULL, *buf_cpy;
 
 	signal(SIGINT, handler);
 	display();
 	write(STDOUT_FILENO, PROMPT, 5);
 	fflush(stdout);
 
-	while ((read = getline(&buf, &size, stdin)) != EOF)
+	while ((read = getline(&buf, &size, stdin)) != -1)
 	{
 
 		count++;
-		if (strncmp(buf, "c", 1) == 0 || strncmp(buf, "q", 1) == 0)
+		buf_cpy = malloc(strlen(buf) + 1);
+		strcpy(buf_cpy, buf);
+		removechars(buf_cpy, DEL);
+		if (strncmp(buf_cpy, "c", 1) == 0 || strncmp(buf_cpy, "q", 1) == 0)
 		{
-			removechars(buf, DEL);
-			if (strcmp(buf, "clear") == 0)
-			{
-				count = 0;
-				execute("/bin/clear");
-			}
-			else if (strcmp(buf, "quit") == 0)
-			{
-				free(buf);
-				exit(EXIT_SUCCESS);
-			}
-			else
-				error(buf, 1);
+			check_command(buf_cpy, &count, buf);
 		}
 		else
 		{
-			removechars(buf, "\t\n");
-			if (strlen(buf) != 0)
-				recieve_arg(buf);
+			recieve_arg(buf);
 		}
+		free(buf_cpy);
 		buf = NULL;
-		if (isatty(STDIN_FILENO))
-                {
-                        write(STDOUT_FILENO, PROMPT, 5);
-                        fflush(stdout);
-                }
+		if (count >= 15)
+			printf("Kindly Clear Your Console\n");
 
+		if (isatty(STDIN_FILENO))
+		{
+			write(STDOUT_FILENO, PROMPT, 5);
+			fflush(stdout);
+		}
 	}
-		if (SIGTERM)
-			putchar('\n');
+	if (SIGTERM)
+		putchar('\n');
+	free(buf);
+	return (EXIT_SUCCESS);
+}
+/**
+ * check_command - This function check if quit or clear was passed as an
+ * argument to getline if not it raises an error
+ * @buf: argument passed
+ * @count: count number of iteraton
+ * @buf_cpy: a copy of buffer
+ */
+
+void check_command(char *buf_cpy, size_t *count, char *buf)
+{
+	if (strcmp(buf_cpy, "clear") == 0)
+	{
+		*count = 0;
+		execute("/bin/clear");
+	}
+	else if (strcmp(buf_cpy, "quit") == 0)
+	{
 		free(buf);
-		return (EXIT_SUCCESS);
+		free(buf_cpy);
+		exit(EXIT_SUCCESS);
+	}
+	else
+		error(buf_cpy, 1);
 }
 
 /**
@@ -84,143 +100,82 @@ void recieve_arg(char *buf)
 			error(args[0], 3);
 		return;
 	}
-	else if (i % 2 == 0)
-		puts("Synthax error: incomplete argument");
+	else if (i == 0)
+		return;
+	else if (i == 2)
+		puts("Synthax Error: Incomplete Argument");
+	else if (i > 3)
+		puts("Synthax Error: Too Many Argument");
 	else
-		sort_args(args);
+		convert_args(args);
 }
 
 /**
- * sort_args - This function sorts args and store in a struct
+ * convert_args - This function converts string to double
  * @args: argument of numbers and operators
  */
 
-void sort_args(char **args)
+void convert_args(char **args)
 {
-	input_t digit_sym[MAX];
-	input_t temp;
-	float numb, first_num;
+	double num1, num2;
 	char *end;
-	int j, i, t, s = 0;
 
-	sg_t sym[] = {
-	{"+", 3, add},
-	{"-", 4, sub},
-	{"*", 1, mul},
-	{"/", 2, divs},
-	{NULL, 6, NULL}
-	};
-
-	for (i= 0; args[i] != NULL; i++)
+	num1 = strtod(args[0], &end);
+	if (*end != '\0')
 	{
-		if (i % 2 == 0)
-		{
-			numb = strtof(args[i], &end);
-			if (*end == '\0')
+		error(args[0], 3);
+		return;
+	}
+	if (errno == ERANGE)
+	{
+		error(args[0], 4);
+		return;
+	}
+	num2 = strtod(args[2], &end);
+	if (*end != '\0')
+	{
+		error(args[2], 3);
+		return;
+	}
+	if (errno == ERANGE)
+	{
+		error(args[2], 4);
+		return;
+	}
+	calculate(num1, args[1], num2);
+}
+/**
+ * calculate - calculates values passed;
+ * @num1: first number
+ * @arg: operator passed
+ * @num2: second number
+ */
+void calculate(double num1, char *arg, double num2)
+{
+	double num;
+
+	switch (*arg)
+	{
+		case '+':
+			num = num1 + num2;
+			break;
+		case '-':
+			num =  num1 - num2;
+			break;
+		case '*':
+			num = num1 * num2;
+			break;
+		case '/':
+			if (num2 == 0)
 			{
-				if (i == 0)
-					first_num = numb;
-				else
-				{
-					digit_sym[s].num = numb;
-					s++;
-				}
-			}
-			else
-			{
-				j = operation(sym, args[i], 0);
-				if (j == 0)
-					error(args[i], 4);
-				else
-					error(args[i], 3);
+				puts("Zero division Error");
 				return;
 			}
-		}
-		else
-		{
-			j = operation(sym, args[i], 1);
-			if (j == 0)
-			{
-				digit_sym[s].sym = args[i];
-				continue;
-			}
-			else if (j == 2)
-				error(args[i], 5);
-			else
-				error(args[i], 2);
+			num = num1 / num2;
+			break;
+		default:
+			error(arg, 2);
 			return;
-		}
 	}
-
-	t = s + 1;
-	for (i = 0; i < t - 1; i++)
-	{
-		s = 0;
-		for (j = 0; j < t - i - 1; j++)
-		{
-		if (digit_sym[i].num > digit_sym[i + 1].num)
-		{
-			s = 1;
-			temp = digit_sym[i];
-			digit_sym[i] = digit_sym[i + 1];
-			digit_sym[i + 1] = temp;
-		}
-		}
-		if (s == 0)
-			break;
-	}
-	calculate_input(first_num, digit_sym, sym, t);
-}
-
-/**
- * error - This function displays error message
- * @var: variable
- * @error_no: Error number
- */
-
-void error(char *var, int error_no)
-{
-	switch(error_no)
-	{
-		case 1:
-			fprintf(stderr,"unrecognised command %s\n", var);
-			break;
-		case 2:
-			fprintf(stderr,"unrecognised operator %s\n", var);
-			break;
-		case 3:
-			fprintf(stderr,"unrecognised number %s\n", var);
-			break;
-		case 4:
-			puts("missing number");
-			break;
-		case 5:
-			puts("missing operation");
-			break;
-	}
-}
-
-/**
- * check_op - This functions checks for operation
- * @sym: array contain operation
- * Return: 0 success
- */
-
-int operation(sg_t *sym, char *arg, int flag)
-{
-	long int i;
-	char *end;
-
-	for (i = 0; sym[i].s != NULL; i++)
-	{
-		if (sym[i].s == arg)
-			return (0);
-	}
-	if (flag == 1)
-	{
-		i = strtol(arg, &end, 10);
-		if (*end == '\0')
-			return (2);
-	}
-		return (1);
+	printf("%.2f\n", num);
 }
