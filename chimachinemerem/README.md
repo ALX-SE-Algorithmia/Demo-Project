@@ -10,3 +10,4 @@ Then run
 ```C
 ./calc
 ```
+![calculator](./calculator.png)
