@@ -1,1 +1,3 @@
-# NodeJS Calculator
+# CLI based NodeJS Calculator
+
+
