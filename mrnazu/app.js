@@ -19,8 +19,8 @@ if (operation === 'add') {
 
 // Check if the operation is subtraction
 if (operation === 'subtract') {
-    // Print the result of subtraction to the console
-    console.log(`${operation} is ${operator1 - operator2}`);
+    // Print the result of subtraction to the console in anotehr way
+    console.log(`Subtraction of these numbers: ${operator1 - operator2}`);
 }
 
 // Check if the operation is multiplication
