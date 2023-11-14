@@ -1,29 +1,36 @@
-const argvs = process.argv
-const argv = argvs.slice(2)
+// Get command line arguments using the process object
+const argvs = process.argv;
 
-const operation = argv[0]
-const operator1 = parseInt(argv[1])
-const operator2 = parseInt(argv[2]) 
+// Extract relevant command line arguments, excluding 'node' and script file name
+const argv = argvs.slice(2);
 
+// Extract the operation (add, subtract, multiply, divide) from command line arguments
+const operation = argv[0];
+
+// Parse the second and third command line arguments as integers
+const operator1 = parseInt(argv[1]);
+const operator2 = parseInt(argv[2]);
+
+// Check if the operation is addition
 if (operation === 'add') {
-    console.log(operation + ' is ' 
-        + (operator1 + operator2));
+    // Print the result of addition to the console
+    console.log(`${operation} is ${operator1 + operator2}`);
 }
 
-
+// Check if the operation is subtraction
 if (operation === 'subtract') {
-    console.log(operation + ' is ' 
-        + (operator1 - operator2));
+    // Print the result of subtraction to the console
+    console.log(`${operation} is ${operator1 - operator2}`);
 }
 
-
+// Check if the operation is multiplication
 if (operation === 'multiply') {
-    console.log(operation + ' is ' 
-        + (operator1 * operator2));
+    // Print the result of multiplication to the console
+    console.log(`${operation} is ${operator1 * operator2}`);
 }
 
-
+// Check if the operation is division
 if (operation === 'divide') {
-    console.log(operation + ' is ' 
-        + (operator1 / operator2));
+    // Print the result of division to the console
+    console.log(`${operation} is ${operator1 / operator2}`);
 }
