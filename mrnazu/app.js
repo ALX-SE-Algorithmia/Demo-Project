@@ -1,7 +1,7 @@
 // Get command line arguments using the process object
 const argvs = process.argv;
 
-// Extract relevant command line arguments, excluding 'node' and script file name
+// Extract relevant command line arguments, excluding 'node' and script file name in my case 'app.js'
 const argv = argvs.slice(2);
 
 // Extract the operation (add, subtract, multiply, divide) from command line arguments
